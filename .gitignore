@@ -1,0 +1,27 @@
+# Ignore les fichiers temporaires LaTeX
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Ignore les fichiers de compilation LaTeX
+*.dvi
+*.fdb_latexmk
+*.fls
+*.synctex(busy)
+
+# Ignore les fichiers de sauvegarde
+*~
+
+# Ignore les fichiers générés par l'éditeur
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore les fichiers de sortie générés par le compilateur
+*.pdf
+*.ps
+*.dvi
+
+# Ignore le répertoire de la distribution TeX Live
+texlive/

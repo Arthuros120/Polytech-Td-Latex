@@ -1,0 +1,89 @@
+% Give your report a title
+\newcommand\reporttitle{Titre}
+
+% Insert course code, name, quartile number and year (or any other subtitle)
+\newcommand\reportsubtitle{
+Spécialité - Année - Cours \\Sx - 202X/202X
+}
+
+% Add your group number (for DBL) or any other text.
+\newcommand\groupnumber{
+\textbf{Groupe X}
+}
+
+% Insert authors and student numbers here
+\newcommand\reportauthors{
+Nom Prénom & EXXXXXXX \\
+Nom Prénom & EXXXXXXX \\
+}
+
+% Add the name of your tutor (for DBL) or any other text.
+\newcommand\grouptutor{
+\textbf{Professeur:} Nom Prénom
+}
+
+% Date and location (default: current date and Eindhoven)
+\newcommand\placeanddate{
+Nantes, \selectlanguage{french}\today
+}
+
+% Define Poly-Blue (color of the TU/e logo). Can be changed to drastically change the look of the template
+\definecolor{Poly-Blue}{RGB}{0, 172, 244}
+
+% All of the following code can be removed to be left with (close to) default LaTeX behaviour. 
+
+% Sets up hyperlinks in the document to be colored
+\hypersetup{
+    colorlinks=true,
+    linkcolor=Poly-Blue,
+    urlcolor=Poly-Blue,
+    citecolor = Poly-Blue
+    }
+\urlstyle{same} % Defines settings for link and reference formatting
+
+
+% Change bullet style for level 1, 2 and 3 respectively for itemize
+\renewcommand{\labelitemi}{\scriptsize\textcolor{Poly-Blue}{$\blacksquare$}}% level 1
+\renewcommand{\labelitemii}{\scriptsize\textcolor{Poly-Blue}{$\square$}}% level 2
+\renewcommand{\labelitemiii}{\textcolor{Poly-Blue}{$\circ$}}% level 3
+
+% \renewcommand{\labelitemi}{\small\textcolor{Poly-Blue}{\ding{70}}} % level 1
+% \renewcommand{\labelitemii}{\small\textcolor{Poly-Blue}{\ding{71}}}% level 2
+% \renewcommand{\labelitemiii}{\tiny\textcolor{Poly-Blue}{\ding{71}}}% level 3
+
+% Change bullet style for level 1, 2 and 3 respectively for enumerate
+\renewcommand{\labelenumi}{\textbf{\textcolor{Poly-Blue}{\arabic*.}}}% level 1
+\renewcommand{\labelenumii}{\textbf{\textcolor{Poly-Blue}{[\alph*]}}}% level 2
+\renewcommand{\labelenumiii}{\textbf{\textcolor{Poly-Blue}{\roman*.}}}% level 3
+
+% Have reference labels be linked to section (section 3 will have fig. 3.1 etc.)
+\counterwithin{equation}{section} % For equations
+\counterwithin{figure}{section} % For figures
+\counterwithin{table}{section} % For tables
+
+% Creates a beautiful header/footer
+\pagestyle{fancy}
+\lhead{\includegraphics[height = 20pt]{Figures/0. General/Poly_Univ-Logo.png}}
+\rhead{\reporttitle}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{Page \thepage}
+
+% Formats section, subsection and subsubsection titles respectively 
+\titleformat{\section}{\sffamily\color{Poly-Blue}\Large\bfseries}{\thesection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats section titles
+
+\titleformat{\subsection}{\sffamily\color{Poly-Blue}\large\bfseries}{\thesubsection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats subsection titles
+
+\titleformat{\subsubsection}{\sffamily\color{Poly-Blue}\bfseries}{\thesubsubsection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats subsubsection titles
+
+% Formats captions
+\DeclareCaptionFont{Poly-Blue}{\color{Poly-Blue}}
+\captionsetup{labelfont={Poly-Blue,bf}}
+
+ % Changes font to mlmodern
+\usepackage{mlmodern}
+
+% Removes indent when starting a new paragraph
+\setlength\parindent{0pt}
+
+% Limits the ToC to sections and subsections (no subsubsec.)
+\setcounter{tocdepth}{2}
