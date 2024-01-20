@@ -25,3 +25,6 @@
 
 # Ignore le répertoire de la distribution TeX Live
 texlive/
+.idea/
+build/
+.DS_Store

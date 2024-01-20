@@ -2,9 +2,7 @@
 \newcommand\reporttitle{Titre}
 
 % Insert course code, name, quartile number and year (or any other subtitle)
-\newcommand\reportsubtitle{
-Spécialité - Année - Cours \\Sx - 202X/202X
-}
+\newcommand\reportsubtitle{Spécialité - Année - Cours \\Sx - 202X/202X}
 
 % Add your group number (for DBL) or any other text.
 \newcommand\groupnumber{
@@ -12,10 +10,7 @@ Spécialité - Année - Cours \\Sx - 202X/202X
 }
 
 % Insert authors and student numbers here
-\newcommand\reportauthors{
-Nom Prénom & EXXXXXXX \\
-Nom Prénom & EXXXXXXX \\
-}
+\newcommand\reportauthors{Nom Prénom & EXXXXXXX \\ Nom Prénom & EXXXXXXX \\}
 
 % Add the name of your tutor (for DBL) or any other text.
 \newcommand\grouptutor{
@@ -87,3 +82,64 @@ Nantes, \selectlanguage{french}\today
 
 % Limits the ToC to sections and subsections (no subsubsec.)
 \setcounter{tocdepth}{2}
+
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\newminted{python}{
+    linenos=true,
+    autogobble=true,
+    frame=lines,
+    framesep=2mm,
+    bgcolor=bg,
+    fontsize=\footnotesize,
+    rulecolor=\color{black!30},
+    samepage=false,
+    tabsize=4
+}
+
+\newminted{sql}{
+    linenos=true,
+    autogobble=true,
+    frame=lines,
+    framesep=2mm,
+    bgcolor=bg,
+    fontsize=\footnotesize,
+    rulecolor=\color{black!30},
+    samepage=false,
+    tabsize=4
+}
+
+\newminted{bash}{
+    linenos=false,
+    autogobble=true,
+    frame=none,
+    framesep=2mm,
+    bgcolor=white,
+    fontsize=\footnotesize,
+    rulecolor=\color{white},
+    samepage=false,
+    tabsize=4
+}
+
+\newminted{console}{
+    linenos=false,
+    autogobble=true,
+    frame=none,
+    framesep=2mm,
+    bgcolor=white,
+    fontsize=\footnotesize,
+    rulecolor=\color{white},
+    samepage=false,
+    tabsize=4
+}
+
+\newminted{verbatim}{
+    linenos=false,
+    autogobble=true,
+    frame=none,
+    framesep=2mm,
+    bgcolor=white,
+    fontsize=\footnotesize,
+    rulecolor=\color{white},
+    samepage=false,
+    tabsize=4
+}
